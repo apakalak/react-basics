@@ -1,0 +1,11 @@
+body{
+    background-color: lightyellow
+}
+
+.counter{
+    border: 2px solid darkseagreen;
+    display: inline-block;
+    background-color: lightgoldenrodyellow;
+    margin: 5px;
+    padding: 5px;
+}

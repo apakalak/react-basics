@@ -1,0 +1,19 @@
+.timer{
+    font-family: monospace;
+    border: 2px solid darkseagreen;
+    display: inline-block;
+    background-color: lightgoldenrodyellow;
+    margin: 5px;
+    padding: 5px;
+}
+#timerResult{
+    margin-top: 5px;
+    padding-left: 5px;
+    display: block;
+    height: 50px;
+    width:100px;
+    border: 2px dotted darkseagreen;
+    font-size: 40px;
+    color: seagreen;
+    border-radius: 10px;
+}
