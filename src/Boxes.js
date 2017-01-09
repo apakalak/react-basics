@@ -5,29 +5,26 @@ import './box.css'
 export default class Boxes extends React.Component {
     constructor(props){
         super(props)
-        //this.getColors = this.getColors.bind(this)
+        this.drawBox = this.drawBox.bind(this)
+        this.state = {num : 0}
     }
-    static getColors(){
-        return {
-            r : Boxes.generateRandom(),
-            g : Boxes.generateRandom(),
-            b : Boxes.generateRandom(),
-            a : Math.random()
-        }
-    }
-
-    static generateRandom() {
-        return Math.floor((Math.random()) * 255);
+  
+    drawBox(){
+        //clearInterval(timer)
+        this.setState({num: +this.num.value})
     }
 
     render(){
         return (
         <div className="boxes">
+        <input type="number" ref={(d => this.num = d)} onChange={this.drawBox}/>
+        <div>
         {
-            Array(10).fill(null).map(( _ , index) => {
-                return  <Box className="box" key={index} colors={Boxes.getColors()}/>
-            })
+            Array(this.state.num).fill(null).map(( _ , index) => {
+            return  <Box  key={index}/>
+         })
         }
+        </div>
         </div> 
         );
     }
